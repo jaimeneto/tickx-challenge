@@ -9,13 +9,14 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
         libonig-dev \
         libcurl4-openssl-dev \
         pkg-config \
-        libssl-dev
+        libssl-dev \
+        libzip-dev
 
 RUN curl -s https://getcomposer.org/installer | php -- \
         --install-dir=/usr/local/bin \
         --filename=composer
 
-RUN docker-php-ext-install mbstring zip json
+RUN docker-php-ext-install mbstring zip
 
 RUN pecl config-set php_ini /etc/php.ini
 
