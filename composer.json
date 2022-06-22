@@ -1,0 +1,19 @@
+{
+    "name": "tickx/backend-challenge",
+    "type": "template",
+    "require": {
+        "symfony/console": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "TickX\\Challenge\\": "src/code/"
+        }
+    },
+    "prefer-stable": true,
+    "scripts": {
+        "test": "php vendor/bin/phpunit tests/"
+    }
+}
